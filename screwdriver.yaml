@@ -1,0 +1,12 @@
+childPipelines:
+  scmUrls:
+    - git@github.com:Filbird/v4-child-1.git
+    - git@github.com:Filbird/v4-child-2.git
+  startAll: true
+
+jobs:
+  main:
+    image: node:8
+    steps:
+        - hello: echo hello
+    requires: [~pr, ~commit]
