@@ -10,3 +10,7 @@ jobs:
     steps:
         - hello: echo hello
     requires: [~pr, ~commit]
+    secrets:
+      - A_SECRET
+      - B_SECRET
+      - C_SECRET
