@@ -9,6 +9,7 @@ jobs:
     image: node:8
     steps:
         - hello: echo hello
+        - env: env
         - config: echo $SD_CONFIG_DIR
     requires: [~pr, ~commit]
     secrets:
